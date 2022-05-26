@@ -16,11 +16,11 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    /* font-family: "Arial", sans-serif; */
     font-size: 16px;
     line-height: 1.5;
     background-color: #fff;
     color: #222;
+    transition: 0.6s ease;
 }
 
 img {
@@ -40,15 +40,241 @@ a {
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    /* max-width: 1000px; */
+    /* padding: 0 10px; */
+    /* padding-top: 100px; */
+    margin: 0 auto;
 }
 
-/* MAIN-CONTENT  */
 
-.main-content {
-    flex-grow: 1;
+*:focus {
+    outline: 2px dashed beige;
+    outline-offset: 5px;
 }
+
+/* SITE-HEADER  */
+
+.header {
+    background-image: url("../img/hero-black-phone.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1900px;
+}
+
+.header::after {
+    display: block;
+    content: "";
+    background-image: url("../img/taxta.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 100%;
+    height: 600px;
+    transform: translateY(-93%);
+    background-position: bottom;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sticky {
+    padding: 10px;
+    transform: translateY(-28%);
+    background-color: #012643;
+}
+.site__nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    margin-top: 150px;
+    transition: 0.4s ease;
+    z-index: 9999;
+}
+
+.site__logo {
+   transform: translateX(-90%);
+}
+.site__nav-list {
+    display: flex;
+}
+
+.site__nav-item ~ .site__nav-item {
+    margin-left: 36px;
+}
+
+.site__nav-link {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.75px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.site__nav-link::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: none;
+}
+
+.site__nav-link:hover {
+    opacity: 0.7;
+}
+
+.site__contact-number {
+    font-family: 'Zona Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.5px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-left: 200px;
+}
+
+.site__contact::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("../img/header-telphone.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    transform: translateX(150px) translateY(20%);
+}
+
+.site__contact::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("../img/night-day-icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    transform: translateX(300px) translateY(-33px);
+}
+
+
+
+.site__header-heading {
+    text-align: center;
+    margin-top: 300px;
+    font-family: 'Volkhov';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.site__header-lang-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 53px;
+}
+
+.header-lang-item{
+    margin-top: 43px;
+}
+
+.lang-item-link {
+    font-family: 'Zona Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.25px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 119px;
+    height: 119px;
+    border: 1.125px solid #FFFFFF;
+    border-radius: 50%;
+    padding: 54px 33px;
+    margin-left: 40px;
+    transition: 0.3s ease;
+}
+
+.lang-item-link:hover {
+    background-color: #025375;
+}
+
+.site__header-flour {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+}
+
+.header__flour-heading {
+    font-family: 'Volkhov';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45.2677px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    z-index: 7777;
+    margin-top: 100px;
+}
+
+.site__flour-images {
+    margin-top: 100px;
+}
+
+.bag-left {
+    transform: translateY(-70%) translateX(-90%);
+}
+
+.bag-bottom {
+    position: absolute;
+    transform: translateY(-450px) translateX(-350px);
+}
+
+.bag-top {
+    position: absolute;
+    transform: translateY(-70%) translateX(-150px);
+}
+
+.bag-right {
+    position: absolute;
+    transform: translateY(-130%);
+}
+
+.header__white-images {
+    width: 100%;
+    background-size: contain;
+    transform: translateY(-10%);
+    background-position: center center;
+    margin: 0;
+}
+
+/* .site__header-wheat {
+    position: absolute;
+} */
+
+.site__header-wheat::after {
+    /* position: absolute; */
+    content: "";
+    display: block;
+    background-image: url("../img/wheat.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 600px;
+    transform: translateY(-50%);
+    background-position: center center;
+}
+
